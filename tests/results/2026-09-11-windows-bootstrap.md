@@ -33,3 +33,9 @@ T02/T03/T04/T06–T08/T15–T18/T20/T23–T28/T30 尚未完整执行。T10–T14
 ## 结论
 
 部署和飞书持久化基础检查 PASS；整体 Phase 1 PARTIAL。尚需身份接入、完整场景和至少3个 Session/30回合真实 dogfood。当前不能量化归线准确率或建议有用率。
+
+## 后续更新：身份阻塞已解除
+
+用户指定身份完成手机验证，CLI 返回 verification_state=completed；id status 显示 ready_for_messaging=true，profile get --self 成功。外层运行配置已显式绑定该身份。手机号、验证码、凭据和用户资料不进入仓库。飞书身份 Todo、I/O 和新架构 Span 追加后回读通过。
+
+以上替代早期“无可用身份”的当前状态判断。没有执行真实发送，T10–T14 仍未完成；还需用户指定收件人及内容。整体仍为 PARTIAL。

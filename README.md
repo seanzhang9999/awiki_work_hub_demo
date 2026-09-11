@@ -53,6 +53,6 @@ tests/RESULTS_TEMPLATE.md
 
 2026-09-11 已核验 mac 飞书工具声明及上述页面读取；本地 AWiki Skill 已安装；Windows → Mac MCP 读取已核验。具体证据见 [能力清单](docs/capability_inventory.md)。
 
-本地预检：AWiki CLI 已更新到 1.0.48，当前工作区无可用身份；真实通讯尚未验证。
+本地预检：AWiki CLI 1.0.48，用户选择的身份已完成验证，身份状态和本人资料读取通过；真实收发尚未验证。
 
 本机部署更新：飞书七页已初始化并回读验证，幂等重放与旧 revision 拒绝通过；完整测试与通讯迁移状态见 [本机验收记录](tests/results/2026-09-11-windows-bootstrap.md)。

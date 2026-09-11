@@ -34,7 +34,7 @@ awiki-cli version
 awiki-cli status
 ```
 
-本次已将 CLI 从 1.0.12 升级到 1.0.48，version/status/schema 检查通过；当前工作区没有可用身份，真实通讯需选择并接入身份。以下升级命令仅供其他尚未升级的环境使用，不需重复执行。Skill 安装与 CLI 升级分开：需升级时阅读官方 upgrade 说明，核验兼容性，不自动迁移或替换既有身份。已授权依赖升级时，可用官方 stable 包安装后再做只读状态检查；身份恢复/注册另按明确用户范围处理。
+本次已将 CLI 从 1.0.12 升级到 1.0.48，version/status/schema 检查通过；本机用户选择的身份现已通过验证，真实通讯仍需覆盖收件人与内容的授权。以下升级命令仅供其他尚未升级的环境使用，不需重复执行。Skill 安装与 CLI 升级分开：需升级时阅读官方 upgrade 说明，核验兼容性，不自动迁移或替换既有身份。已授权依赖升级时，可用官方 stable 包安装后再做只读状态检查；身份恢复/注册另按明确用户范围处理。
 
 ```powershell
 npm.cmd install -g https://awiki.ai/cli/stable/awiki-cli.tgz
