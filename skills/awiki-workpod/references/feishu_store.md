@@ -59,3 +59,7 @@ mac_read_page({page_ref: configured_ref})  // 查 event_id 和实际内容
 使用 append-only，保留富文本。最新快照追加到页尾，标明确 as_of / complete / source_event_ids。体量超出当前工具可完整回读范围时，不悄悄漏历史：暂停该页投影，创建按期分卷的计划交用户决定；迁移查询型存储留后续阶段。
 
 飞书不可用时只能在当前回复呈现待同步增量和 unknown，不创建本地 Work Graph。会话中断可能丢失未写入增量，这是 Phase 1 的明确限制。
+
+## 可读入口
+
+会话/Thread 双表为默认阅读视图，JSON 为追溯层。可在 P0 容器下按需创建详情页和成果正文页，属于飞书外化，不是新增本地成果库。Dashboard 和 Matter 必须提供最新可读入口；详情链接均使用服务返回的 feishu_url。遵循 externalization.md 的同源详情与版本约定。

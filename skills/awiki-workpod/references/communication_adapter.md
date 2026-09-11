@@ -51,3 +51,7 @@
 | respond | `msg send`；是否有 reply 参数以 schema 为准，无则仅附 WR 关联，不能伪造原生 reply threading |
 
 官方源：[CLI 与 Skill](https://awiki.ai/cli/)。归一化时解析 `ok/data/error/meta`，不只看 summary。若当前 schema 支持 `--client-message-id` / `--idempotency-key`，传稳定 WR 关联键并验证返回；支持声明不替代真实幂等测试。
+
+## 收件人体验与发送可观测性
+
+收件人不需要理解 Work Hub 数据对象。消息直接写清目标、最小背景、要做什么、材料完整 URL、预期回复方式和权限状态；公开标识不授予飞书权限。Work Hub 展示真实 sent_body、发送人/收件人、时间、文档链接、provider ID 与状态，来源是实际发送参数/历史，不用 request JSON 代替正文。未装 Work Hub 的用户仍需可用的收信身份/客户端；无材料读取能力时，在授权范围提供必要摘录或由人阅读。只有参与者明确愿意管理持续工作时才建议安装；安装不等于取得数据权限，也不授权迁移历史。

@@ -60,3 +60,9 @@ IO verified 的证据须对应具体断言：写操作回单/回读证明写入�
 ```
 
 上述 ID 仅为测试示例。allowed_capabilities 只反映已有权限，不能通过写入该字段授予权限。
+
+## 外化视图的兼容扩展
+
+ThreadSpan 增加 source_segments[]、exchanges[]、user_summary、assistant_summary、turn_count（未知 null）、capture_mode（retrospective/live）、detail_ref/url、artifact_refs[]。一条 exchange 用角色摘要和实际 source_ref 定位；不虚构平台消息 ID。旧记录缺字段不补造事实。
+
+Thread 增加 span_refs[]；Artifact 增加 url、source_span_refs[]、decision_refs[]、contributing_threads[]；WorkRequest 增加 document_url、sent_body、sent_body_source、permission_status。发送正文只在已有授权工作状态中保存，不进入公开 Git；禁止带入凭据。详情展示约定见 externalization.md。
