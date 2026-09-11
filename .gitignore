@@ -1,0 +1,7 @@
+config/local/
+.agents/skills/
+.codex/
+tests/results/local/
+.env
+.env.*
+.DS_Store

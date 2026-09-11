@@ -1,0 +1,18 @@
+# 仅结构示例，不可原样启用。优先使用当前 Windows Codex 已连接的远端 Mac MCP 工具。
+# 当前桌面连接器已可用时无需添加任何此类配置。
+# 本文件不是自动加载的 Codex 配置，所有示例都保持注释。
+# 从已安装 mac 飞书服务说明取得真实值；不猜端口/命令。
+# STDIO 与 HTTP 只选一种，不覆盖用户整个 config.toml。
+
+# [mcp_servers.mac_feishu_existing]
+# command = "/ABSOLUTE/PATH/TO/EXISTING/SERVER"
+# args = ["EXISTING_ARGUMENT"]
+# env_vars = ["EXISTING_CREDENTIAL_ENV_NAME"]
+
+# 或现有 Streamable HTTP：
+# [mcp_servers.mac_feishu_existing]
+# url = "https://YOUR-EXISTING-MCP-ENDPOINT"
+# bearer_token_env_var = "EXISTING_MCP_TOKEN_ENV"
+
+# 若服务使用 OAuth，以原服务文档认证，不额外加 bearer token。
+# 不将 localhost viewer URL 当作 MCP URL；不提交真实凭据。

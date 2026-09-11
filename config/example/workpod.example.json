@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "phase": 1,
+  "deployment_id": null,
+  "matter_id": "awiki-workpod",
+  "feishu": {
+    "server_name": null,
+    "root_alias": "awiki",
+    "container_ref": null,
+    "pages": {
+      "dashboard": null,
+      "matter": null,
+      "artifacts": null,
+      "decisions_todos": null,
+      "io_log": null,
+      "work_requests": null,
+      "suggestions": null
+    },
+    "tool_bindings": {
+      "read": null,
+      "create": null,
+      "append": null,
+      "receipt": null
+    },
+    "write_strategy": "guarded_append",
+    "max_conflict_retries": 2
+  },
+  "awiki": {
+    "skill_path": null,
+    "skill_name": null,
+    "verified_version": null,
+    "capability_bindings": {
+      "list_contacts": null,
+      "get_relationship": null,
+      "send_request": null,
+      "get_updates": null,
+      "respond": null
+    }
+  },
+  "suggestions": {
+    "max_per_turn": 1,
+    "same_reason_cooldown_hours": 24,
+    "dismissed_requires_new_evidence": true
+  },
+  "policy": {
+    "external_send_requires_explicit_authorization": true,
+    "artifact_mode": "metadata_only",
+    "single_writer": true,
+    "local_file_scan": false,
+    "daemon": false,
+    "complex_router": false,
+    "anp_federation": false
+  }
+}
