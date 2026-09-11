@@ -13,3 +13,7 @@
 这是人工自检与当前回合真实飞书持久化测试，既有部分回顾采集也有本轮执行；不证明通用归线准确率、独立盲测或跨会话恢复。旧十片段表未全量重分段。新网络目标独立成 Thread；不是更换现有 Thread ID。
 
 T31–T35 以该样本验收；T36 完整来源重跑尚未执行。无新外发、无后台监听、无本地业务 Work Graph、无 ANP federation 实现。对方回复、访问权限及跨实现互操作不在本轮通过范围。
+
+## 实际回读检查结果
+
+三 Span / 多轮聚合 / A-B-A Thread 接续 / 双方摘要 / 同源详情 / 成果未自动接受 / 正文返回视图链接：通过。初次检查发现一个 Span 缺少成果反向引用，追加 correction 并升级源片段版本后，重新解析飞书 JSON 核对所有 Artifact 的版本化来源及反向 artifact_refs，通过。成果正文、详情、视图均回读至 revision 2；Matter revision 6、Artifact Registry revision 4、Decision 页 revision 4。属于样本内验证，不是盲测。
